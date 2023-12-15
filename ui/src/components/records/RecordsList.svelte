@@ -537,14 +537,14 @@
                 {:else}
                     <tr>
                         <td colspan="99" class="txt-center txt-hint p-xs">
-                            <h6>No records found.</h6>
+                            <h6>Nenhum registro encontrado.</h6>
                             {#if filter?.length}
                                 <button
                                     type="button"
                                     class="btn btn-hint btn-expanded m-t-sm"
                                     on:click={() => (filter = "")}
                                 >
-                                    <span class="txt">Clear filters</span>
+                                    <span class="txt">Limpar filtros</span>
                                 </button>
                             {:else if !isView}
                                 <button
@@ -553,7 +553,7 @@
                                     on:click={() => dispatch("new")}
                                 >
                                     <i class="ri-add-line" />
-                                    <span class="txt">New record</span>
+                                    <span class="txt">Novo registro</span>
                                 </button>
                             {/if}
                         </td>

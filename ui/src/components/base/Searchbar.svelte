@@ -7,7 +7,7 @@
     const uniqueId = "search_" + CommonHelper.randomString(7);
 
     export let value = "";
-    export let placeholder = 'Search term or filter like created > "2022-01-01"...';
+    export let placeholder = 'Procure por uma palavra chave ou filtre como em: created > "2022-01-01"...';
 
     // autocomplete filter component fields
     export let autocompleteCollection = CommonHelper.initCollection();

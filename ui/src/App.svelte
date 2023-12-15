@@ -77,10 +77,10 @@
         <aside class="app-sidebar">
             <a href="/" class="logo logo-sm" use:link>
                 <img
-                    src="{import.meta.env.BASE_URL}images/logo.svg"
+                    src="{import.meta.env.BASE_URL}images/logo.png"
                     alt="PocketBase logo"
-                    width="40"
-                    height="40"
+                    width="60"
+                    height="45"
                 />
             </a>
 
@@ -91,7 +91,7 @@
                     aria-label="Collections"
                     use:link
                     use:active={{ path: "/collections/?.*", className: "current-route" }}
-                    use:tooltip={{ text: "Collections", position: "right" }}
+                    use:tooltip={{ text: "Coleções", position: "right" }}
                 >
                     <i class="ri-database-2-line" />
                 </a>
@@ -111,7 +111,7 @@
                     aria-label="Settings"
                     use:link
                     use:active={{ path: "/settings/?.*", className: "current-route" }}
-                    use:tooltip={{ text: "Settings", position: "right" }}
+                    use:tooltip={{ text: "Configurações", position: "right" }}
                 >
                     <i class="ri-tools-line" />
                 </a>
@@ -125,12 +125,12 @@
                 <Toggler class="dropdown dropdown-nowrap dropdown-upside dropdown-left">
                     <a href="/settings/admins" class="dropdown-item closable" use:link>
                         <i class="ri-shield-user-line" />
-                        <span class="txt">Manage admins</span>
+                        <span class="txt">Gerenciar Administradores</span>
                     </a>
                     <hr />
                     <button type="button" class="dropdown-item closable" on:click={logout}>
                         <i class="ri-logout-circle-line" />
-                        <span class="txt">Logout</span>
+                        <span class="txt">Sair</span>
                     </button>
                 </Toggler>
             </figure>

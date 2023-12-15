@@ -78,7 +78,7 @@
             </div>
             <input
                 type="text"
-                placeholder="Search collections..."
+                placeholder="Busque uma coleção..."
                 name="collections-search"
                 bind:value={searchTerm}
             />
@@ -117,7 +117,7 @@
         <footer class="sidebar-footer">
             <button type="button" class="btn btn-block btn-outline" on:click={() => collectionPanel?.show()}>
                 <i class="ri-add-line" />
-                <span class="txt">New collection</span>
+                <span class="txt">Nova coleção</span>
             </button>
         </footer>
     {/if}

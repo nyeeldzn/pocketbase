@@ -128,7 +128,7 @@
     <PageWrapper center>
         <div class="placeholder-section m-b-base">
             <span class="loader loader-lg" />
-            <h1>Loading collections...</h1>
+            <h1>Carregando coleções...</h1>
         </div>
     </PageWrapper>
 {:else if !$collections.length}
@@ -138,16 +138,16 @@
                 <i class="ri-database-2-line" />
             </div>
             {#if $hideControls}
-                <h1 class="m-b-10">You don't have any collections yet.</h1>
+                <h1 class="m-b-10">Você ainda não tem nenhuma coleção.</h1>
             {:else}
-                <h1 class="m-b-10">Create your first collection to add records!</h1>
+                <h1 class="m-b-10">Crie a sua primeira coleção para adicionar registros!</h1>
                 <button
                     type="button"
                     class="btn btn-expanded-lg btn-lg"
                     on:click={() => collectionUpsertPanel?.show()}
                 >
                     <i class="ri-add-line" />
-                    <span class="txt">Create new collection</span>
+                    <span class="txt">Crie uma nova coleção</span>
                 </button>
             {/if}
         </div>
@@ -158,7 +158,7 @@
     <PageWrapper class="flex-content">
         <header class="page-header">
             <nav class="breadcrumbs">
-                <div class="breadcrumb-item">Collections</div>
+                <div class="breadcrumb-item">Coleções</div>
                 <div class="breadcrumb-item">{$activeCollection.name}</div>
             </nav>
 
@@ -168,7 +168,7 @@
                         type="button"
                         aria-label="Edit collection"
                         class="btn btn-transparent btn-circle"
-                        use:tooltip={{ text: "Edit collection", position: "right" }}
+                        use:tooltip={{ text: "Editar coleção", position: "right" }}
                         on:click={() => collectionUpsertPanel?.show($activeCollection)}
                     >
                         <i class="ri-settings-4-line" />
@@ -190,13 +190,13 @@
                     on:click={() => collectionDocsPanel?.show($activeCollection)}
                 >
                     <i class="ri-code-s-slash-line" />
-                    <span class="txt">API Preview</span>
+                    <span class="txt">Exemplos de API</span>
                 </button>
 
                 {#if $activeCollection.type !== "view"}
                     <button type="button" class="btn btn-expanded" on:click={() => recordUpsertPanel?.show()}>
                         <i class="ri-add-line" />
-                        <span class="txt">New record</span>
+                        <span class="txt">Novo registro</span>
                     </button>
                 {/if}
             </div>

@@ -25,7 +25,7 @@
                 replace("/");
             })
             .catch(() => {
-                addErrorToast("Invalid login credentials.");
+                addErrorToast("Credenciais de login incorretas.");
             })
             .finally(() => {
                 isLoading = false;
@@ -36,7 +36,7 @@
 <FullPage>
     <form class="block" on:submit|preventDefault={login}>
         <div class="content txt-center m-b-base">
-            <h4>Admin sign in</h4>
+            <h4>Login</h4>
         </div>
 
         <Field class="form-field required" name="identity" let:uniqueId>
@@ -46,10 +46,10 @@
         </Field>
 
         <Field class="form-field required" name="password" let:uniqueId>
-            <label for={uniqueId}>Password</label>
+            <label for={uniqueId}>Senha</label>
             <input type="password" id={uniqueId} bind:value={password} required />
             <div class="help-block">
-                <a href="/request-password-reset" class="link-hint" use:link>Forgotten password?</a>
+                <a href="/request-password-reset" class="link-hint" use:link>Esqueceu sua senha?</a>
             </div>
         </Field>
 
@@ -59,7 +59,7 @@
             class:btn-disabled={isLoading}
             class:btn-loading={isLoading}
         >
-            <span class="txt">Login</span>
+            <span class="txt">Entrar</span>
             <i class="ri-arrow-right-line" />
         </button>
     </form>
